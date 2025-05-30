@@ -1,0 +1,20 @@
+{
+  "name": "microservice",
+  "version": "1.0.0",
+  "description": "Microservices architecture for job application system",
+  "type": "commonjs",
+  "scripts": {
+    "install:all": "npm install && cd api-gateway && npm install && cd ../user-service && npm install",
+    "start": "concurrently \"npm run start:gateway\" \"npm run start:user\"",
+    "start:gateway": "cd api-gateway && npm run start",
+    "start:user": "cd user-service && npm run start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.0"
+  }
+}
