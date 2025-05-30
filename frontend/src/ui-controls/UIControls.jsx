@@ -746,14 +746,14 @@ const UIControls = () => {
 
   return (
     <>
-      {/* <ScrollBar
-        maxHeight={`calc(100vh)`}
+      <ScrollBar
+        maxHeight={`100vh`}
         maxWidth={`100%`}
         horizontal={"hidden"}
         verticle={"scroll"}
         autohide={"scroll"}
-      > */}
-        <div className="container mx-auto px-20 m-2 overflow-auto">
+      >
+        <div className="container mx-auto px-20 m-2">
           <div className="grid my-5 text-lg text-center">UI Controls</div>
 
           <div className="grid md:grid-cols-2">
@@ -2028,7 +2028,7 @@ const UIControls = () => {
             </Drawer>
           </div>
         </div>
-      {/* </ScrollBar> */}
+      </ScrollBar>
     </>
   );
 };
