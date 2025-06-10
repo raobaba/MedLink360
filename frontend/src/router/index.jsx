@@ -12,6 +12,7 @@ import AppLogout from "./AppLogout";
 import UIControls from "../ui-controls/UIControls";
 import SignUp from "../modules/authentication/components/SignUp";
 import Landing from "../modules/authentication/container"
+import SignIn from "../modules/authentication/components/SignIn";
 
 const Routing = () => {
   return (
@@ -22,6 +23,7 @@ const Routing = () => {
           <Route path="/" element={<Landing />} />
 
           <Route path="/uicomponents" element={<UIControls />} />
+          <Route path="/sign-in" element={<SignIn />} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
