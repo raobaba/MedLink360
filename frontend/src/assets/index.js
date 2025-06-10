@@ -1,5 +1,5 @@
 import Logo from "./images/Logo.png";
-import LogoLogin from "./images/app_logo.svg";
+import LogoLogin from "./images/vite.config.svg";
 import IcPlus from "./images/Ic_plus_trans.png";
 import IcPerson from "./images/Ic_person.png";
 import IcEye from "./images/Ic_eye.png";
