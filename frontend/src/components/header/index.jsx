@@ -49,7 +49,7 @@ const Header = ({ children, isDisabled, user }) => {
 
   return (
     <>
-      <nav className="4xl:h-24 h-13 bg-primary-theme fixed top-0 z-10 w-full flex justify-between">
+      <nav className="h-13 bg-primary-theme fixed top-0 z-10 w-full flex justify-between">
         <div className="flex px-6 w-[100%]">
           {/* Logo */}
           <div className="grid ">
