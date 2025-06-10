@@ -54,12 +54,12 @@ const Header = ({ children, isDisabled, user }) => {
           {/* Logo */}
           <div className="grid ">
             <Avatar
-              size="sm"
+              size="lg"
               title="logo"
               isRounded={false}
               isDisabled={isDisabled}
               src={LogoLogin}
-              imgStyle={"site-logo 4xl:h-hp-48 !h-7"}
+              imgStyle={"!h-10 w-full"}
             />
           </div>
 

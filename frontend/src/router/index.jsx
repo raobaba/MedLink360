@@ -7,10 +7,11 @@ import {
 } from "react-router-dom";
 
 import { CircularLoader } from "../components";
-import Home from "../pages/Home";
+import Home from "../pages/Home"; // (not used right now)
 import AppLogout from "./AppLogout";
 import UIControls from "../ui-controls/UIControls";
-import SignUp from "../modules/authentication/SignUp";
+import SignUp from "../modules/authentication/components/SignUp";
+import Landing from "../modules/authentication/container"
 
 const Routing = () => {
   return (
@@ -18,11 +19,11 @@ const Routing = () => {
       <Suspense fallback={<CircularLoader />}>
         <AppLogout />
         <Routes>
-          {/* You can add more routes like this */}
-          {/* <Route path="*" element={<Navigate to="/home" />} /> */}
-          <Route index path="/home" element={<SignUp />} />
-          
+          <Route path="/" element={<Landing />} />
+
           <Route path="/uicomponents" element={<UIControls />} />
+
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>
     </Router>

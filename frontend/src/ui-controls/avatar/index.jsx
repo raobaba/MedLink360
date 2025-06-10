@@ -43,8 +43,8 @@ const Avatar = ({
   });
 
   var iconClass = classNames(iconStyle, icon, {
-    // 'text-sm': size === sizeEnum.small,
-    // 'text-lg': size === sizeEnum.medium,
+    'text-sm': size === sizeEnum.small,
+    'text-lg': size === sizeEnum.medium,
     // 'text-lg': size === sizeEnum.large,
   });
 
