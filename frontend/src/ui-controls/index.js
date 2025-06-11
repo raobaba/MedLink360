@@ -41,7 +41,8 @@ import DateOptionsDropdown from "./multidropdown-date";
 import Image from "./image-tag";
 import DocumentUploader from "./uploader";
 import Modal from "./model";
-import ModalSubmit from "./model/submit.jsx"
+import ModalSubmit from "./model/submit.jsx";
+import Scrollbar from "./scrollbar/Scrollbar";
 export {
   Text,
   Dropdown,
@@ -86,5 +87,6 @@ export {
   Image,
   DocumentUploader,
   Modal,
-  ModalSubmit
+  ModalSubmit,
+  Scrollbar,
 };

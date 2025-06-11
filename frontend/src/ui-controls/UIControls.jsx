@@ -28,7 +28,7 @@ import {
   TextArea,
   Drawer,
   ScrollBar,
-  
+  Scrollbar,
 } from "../ui-controls";
 import { IcPerson, IcEye } from "../assets";
 import _ from "lodash";
@@ -41,7 +41,7 @@ export const CardControl = ({ isHoverEnable }) => {
       isDisabled={false}
       cardStyle={"card-style"}
     >
-      <h3 className="text-lg leading-6 font-medium pb-4 text-color-text">
+      <h3 className="text-color-text pb-4 text-lg leading-6 font-medium">
         Title
       </h3>
     </Card>
@@ -211,7 +211,6 @@ export const TextInputControl = ({
       image={image}
       imageStyle="image"
       isDisabled={isDisabled}
-     
     />
   );
 };
@@ -746,29 +745,22 @@ const UIControls = () => {
 
   return (
     <>
-      {/* <ScrollBar
-        maxHeight={`100vh`}
-        maxWidth={`100%`}
-        horizontal={"hidden"}
-        verticle={"scroll"}
-        autohide={"scroll"}
-      > */}
-        <ScrollBar>
-        <div className="container mx-auto px-20 m-2">
-          <div className="grid my-5 text-lg text-center">UI Controls</div>
+      <ScrollBar>
+        <div className="container m-2 mx-auto px-20">
+          <div className="my-5 grid text-center text-lg">UI Controls</div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2 text-secondary-theme">
+            <div className="text-secondary-theme m-3 border-b py-2 text-sm">
               COLOR PALETTE
             </div>
-            <div className="border-b text-sm m-3 py-2 text-secondary-theme">
+            <div className="text-secondary-theme m-3 border-b py-2 text-sm">
               TYPOGRAPHY
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
-              <div className="grid-cols-4 grid mb-4">
+              <div className="mb-4 grid grid-cols-4">
                 <div className="pr-4">
                   <Card isDisabled={false} cardStyle={"card-color-B"} />
                   <div className="text-sm font-medium uppercase">#133857</div>
@@ -786,7 +778,7 @@ const UIControls = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-4 mb-4">
+              <div className="mb-4 grid grid-cols-4">
                 <div className="pr-4">
                   <Card isDisabled={false} cardStyle={"card-color-acent"} />
                   <div className="text-sm font-medium uppercase">#14A8C5</div>
@@ -810,7 +802,7 @@ const UIControls = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-4 mb-4">
+              <div className="mb-4 grid grid-cols-4">
                 <div className="pr-4">
                   <Card
                     isDisabled={false}
@@ -853,7 +845,7 @@ const UIControls = () => {
             </div>
 
             <div className="m-3">
-              <div className="grid grid-cols-2 mb-4">
+              <div className="mb-4 grid grid-cols-2">
                 <>
                   <div className="grid grid-cols-2">
                     <div className="pr-4">
@@ -878,8 +870,8 @@ const UIControls = () => {
                 </>
 
                 <>
-                  <div className="grid grid-cols-1 mb-4">
-                    <div className="text-sm my-2">
+                  <div className="mb-4 grid grid-cols-1">
+                    <div className="my-2 text-sm">
                       Instrument Sans (Regular)
                     </div>
                     <div className="text-txt-16 font-regular my-2">
@@ -890,14 +882,14 @@ const UIControls = () => {
                     <div className="text-txt-16 font-regular my-2 uppercase">
                       Section Subtitle - 16PX
                     </div>
-                    <div className="text-txt-16 font-semibold my-2">
+                    <div className="text-txt-16 my-2 font-semibold">
                       Instrument Sans (Semibold)
                     </div>
-                    <div className="text-txt-16 font-bold my-2">
+                    <div className="text-txt-16 my-2 font-bold">
                       Instrument Sans (Bold)
                     </div>
 
-                    <div className="text-txt-16 font-playfair font-medium my-2">
+                    <div className="text-txt-16 font-playfair my-2 font-medium">
                       Playfair (Medium)
                     </div>
 
@@ -926,11 +918,11 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">INPUT</div>
-            <div className="border-b text-sm m-3 py-2">DROPDOWN</div>
+            <div className="m-3 border-b py-2 text-sm">INPUT</div>
+            <div className="m-3 border-b py-2 text-sm">DROPDOWN</div>
           </div>
 
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
               <div className="grid md:grid-cols-2">
                 <div className="pr-4">
@@ -967,30 +959,30 @@ const UIControls = () => {
             </div>
 
             <div className="m-3">
-              <div className="grid md:grid-cols-2 dropdownwrp">
-                <div className="pr-4 w-full">
-                  <label className="block text-sm label-sm text-color-text">
+              <div className="dropdownwrp grid md:grid-cols-2">
+                <div className="w-full pr-4">
+                  <label className="label-sm text-color-text block text-sm">
                     Active
                   </label>
                   <DropdownControl />
                 </div>
                 <div className="pr-4">
-                  <label className="block text-sm label-sm text-color-text">
+                  <label className="label-sm text-color-text block text-sm">
                     Disable
                   </label>
                   <DropdownControl isDisabled={true} />
                 </div>
-                <div className="mt-2 pr-6 relative">
-                  <label className="block text-right mt-0 -mr-2 text-sm label-sm text-color-text">
+                <div className="relative mt-2 pr-6">
+                  <label className="label-sm text-color-text mt-0 -mr-2 block text-right text-sm">
                     Multi Dropdown
                   </label>
-                  <div className="absolute w-full pr-4 pt-2">
+                  <div className="absolute w-full pt-2 pr-4">
                     <MultiDropdownControl />
                   </div>
                 </div>
 
-                <div className="mt-2 pr-6 relative">
-                  <label className="block mt-0 -mr-2 text-sm label-sm text-color-text">
+                <div className="relative mt-2 pr-6">
+                  <label className="label-sm text-color-text mt-0 -mr-2 block text-sm">
                     Checkbox Dropdown
                   </label>
                   <div className="absolute w-full">
@@ -1002,11 +994,11 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">TEXTAREA</div>
-            <div className="border-b text-sm m-3 py-2"></div>
+            <div className="m-3 border-b py-2 text-sm">TEXTAREA</div>
+            <div className="m-3 border-b py-2 text-sm"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
               <div className="">
                 <TextAreaControl
@@ -1022,21 +1014,21 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">CARD</div>
+            <div className="m-3 border-b py-2 text-sm">CARD</div>
 
-            <div className="border-b text-sm m-3 py-2">ICONS</div>
+            <div className="m-3 border-b py-2 text-sm">ICONS</div>
           </div>
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
               <div className="grid md:grid-cols-2">
                 <div className="pr-4">
-                  <label className="block text-sm label-sm text-color-text">
+                  <label className="label-sm text-color-text block text-sm">
                     Normal
                   </label>
                   <CardControl isHoverEnable={false} />
                 </div>
                 <div className="pr-4">
-                  <label className="block text-sm label-sm text-color-text">
+                  <label className="label-sm text-color-text block text-sm">
                     On Mouse Hover
                   </label>
                   <CardControl isHoverEnable={true} />
@@ -1069,8 +1061,8 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">LINK BUTTONS</div>
-            <div className="border-b text-sm m-3 py-2">RADIO</div>
+            <div className="m-3 border-b py-2 text-sm">LINK BUTTONS</div>
+            <div className="m-3 border-b py-2 text-sm">RADIO</div>
           </div>
           <div className="grid grid-cols-2 pb-6">
             <div className="m-3">
@@ -1094,13 +1086,13 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b !text-sm m-3 py-2">AVATAR</div>
-            <div className="border-b !text-sm m-3 py-2">ICON-BUTTON</div>
+            <div className="m-3 border-b py-2 !text-sm">AVATAR</div>
+            <div className="m-3 border-b py-2 !text-sm">ICON-BUTTON</div>
           </div>
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
-              <div className="grid md:grid-cols-1 mb-5">
-                <div className="pr-4 flex">
+              <div className="mb-5 grid md:grid-cols-1">
+                <div className="flex pr-4">
                   <AvatarControl
                     src={IcPerson}
                     isClickable={true}
@@ -1123,8 +1115,8 @@ const UIControls = () => {
                   />
                 </div>
               </div>
-              <div className="grid md:grid-cols-1 mb-5">
-                <div className="pr-4 flex">
+              <div className="mb-5 grid md:grid-cols-1">
+                <div className="flex pr-4">
                   <AvatarControl
                     icon={"icon-add-icon"}
                     iconStyle={"text-primary-accent !text-xl"}
@@ -1147,12 +1139,12 @@ const UIControls = () => {
                   />
                 </div>
               </div>
-              <div className="grid md:grid-cols-1 mb-5">
-                <div className="pr-4 flex"></div>
+              <div className="mb-5 grid md:grid-cols-1">
+                <div className="flex pr-4"></div>
               </div>
             </div>
             <div className="m-3">
-              <div className="grid grid-cols-7 mb-5">
+              <div className="mb-5 grid grid-cols-7">
                 <div className="pr-4">
                   <IconButtonControl
                     icsize={"sm"}
@@ -1187,7 +1179,7 @@ const UIControls = () => {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-7 mb-5">
+              <div className="mb-5 grid grid-cols-7">
                 <div className="pr-4">
                   <IconButtonControl
                     icsize={"md"}
@@ -1222,7 +1214,7 @@ const UIControls = () => {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-7 mb-5">
+              <div className="mb-5 grid grid-cols-7">
                 <div className="pr-4">
                   <IconButtonControl
                     icsize={"sm"}
@@ -1290,13 +1282,13 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">CHECKBOX</div>
-            <div className="border-b text-sm m-3 py-2">LABEL</div>
+            <div className="m-3 border-b py-2 text-sm">CHECKBOX</div>
+            <div className="m-3 border-b py-2 text-sm">LABEL</div>
           </div>
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
               <div className="grid grid-cols-1">
-                <div className="grid md:grid-cols-4 mb-5">
+                <div className="mb-5 grid md:grid-cols-4">
                   <>
                     <CheckboxControl
                       size={"sm"}
@@ -1361,7 +1353,7 @@ const UIControls = () => {
                     />
                   </>
                 </div>
-                <div className="grid md:grid-cols-1 mt-5">
+                <div className="mt-5 grid md:grid-cols-1">
                   <>
                     <CheckboxControl
                       size={"lg"}
@@ -1394,10 +1386,10 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">FLAT-BUTTON</div>
-            <div className="border-b text-sm m-3 py-2">TOGGLE</div>
+            <div className="m-3 border-b py-2 text-sm">FLAT-BUTTON</div>
+            <div className="m-3 border-b py-2 text-sm">TOGGLE</div>
           </div>
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
               <div className="grid md:grid-cols-1">
                 <div className="pr-4">
@@ -1447,10 +1439,10 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">SEARCH INPUT</div>
-            <div className="border-b text-sm m-3 py-2">TOOLTIP</div>
+            <div className="m-3 border-b py-2 text-sm">SEARCH INPUT</div>
+            <div className="m-3 border-b py-2 text-sm">TOOLTIP</div>
           </div>
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
               <div className="grid md:grid-cols-2">
                 <div className="pr-4">
@@ -1479,7 +1471,7 @@ const UIControls = () => {
                     tooltipStyle={"tooltip-style"}
                     lblStyle={"labelClass"}
                   >
-                    <button className="text-sm my-2">on Hover</button>   
+                    <button className="my-2 text-sm">on Hover</button>   
                   </Tooltip>
                 </>
                 <>
@@ -1514,10 +1506,10 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">RANGE INPUT</div>
-            <div className="border-b text-sm m-3 py-2"></div>
+            <div className="m-3 border-b py-2 text-sm">RANGE INPUT</div>
+            <div className="m-3 border-b py-2 text-sm"></div>
           </div>
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
               <div className="grid grid-cols-1">
                 <RangeInputCotrol />
@@ -1525,16 +1517,16 @@ const UIControls = () => {
             </div>
           </div>
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">
+            <div className="m-3 border-b py-2 text-sm">
               BUTTON (Default , Hover)
             </div>
-            <div className="border-b !text-sm m-3 py-2">
+            <div className="m-3 border-b py-2 !text-sm">
               BUTTON (Icon, Data)
             </div>
           </div>
-          <div className="grid md:grid-cols-2 pb-6">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-3">
-              <div className="grid grid-cols-4 mb-5">
+              <div className="mb-5 grid grid-cols-4">
                 <>
                   <ButtonControl
                     size={"md"}
@@ -1565,7 +1557,7 @@ const UIControls = () => {
                   />
                 </>
               </div>
-              <div className="grid grid-cols-4 mb-5">
+              <div className="mb-5 grid grid-cols-4">
                 <>
                   <ButtonControl
                     size={"md"}
@@ -1595,7 +1587,7 @@ const UIControls = () => {
                   />
                 </>
               </div>
-              <div className="grid grid-cols-4 mb-5">
+              <div className="mb-5 grid grid-cols-4">
                 <>
                   <ButtonControl
                     size={"md"}
@@ -1628,8 +1620,8 @@ const UIControls = () => {
                   />
                 </>
               </div>
-              <div className="grid grid-cols-1 mb-5 w-40">
-                <div className="w-44 btn-grps fix">
+              <div className="mb-5 grid w-40 grid-cols-1">
+                <div className="btn-grps fix w-44">
                   <ButtonControl
                     size={"custom"}
                     name={"CPT"}
@@ -1696,7 +1688,7 @@ const UIControls = () => {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-4 mb-5">
+              <div className="mb-5 grid grid-cols-4">
                 <>
                   <ButtonControl
                     size={"custom"}
@@ -1719,7 +1711,7 @@ const UIControls = () => {
             </div>
 
             <div className="m-3">
-              <div className="grid grid-cols-4 mb-5">
+              <div className="mb-5 grid grid-cols-4">
                 <>
                   <DataButtonControl
                     size={"md"}
@@ -1767,7 +1759,7 @@ const UIControls = () => {
                 <></>
               </div>
 
-              <div className="grid grid-cols-3 mb-5 bg-white p-5">
+              <div className="mb-5 grid grid-cols-3 bg-white p-5">
                 <div className="mr-1">
                   <DataButtonControl
                     size={"md"}
@@ -1796,7 +1788,7 @@ const UIControls = () => {
                   />
                 </>
               </div>
-              <div className="grid grid-cols-2 mb-2 bg-white p-5">
+              <div className="mb-2 grid grid-cols-2 bg-white p-5">
                 <div className="mr-1">
                   <DataButtonControl
                     size={"md"}
@@ -1829,20 +1821,20 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">DATE PICKER</div>
-            <div className="border-b text-sm m-3 py-2">Dialog</div>
+            <div className="m-3 border-b py-2 text-sm">DATE PICKER</div>
+            <div className="m-3 border-b py-2 text-sm">Dialog</div>
           </div>
-          <div className="grid md:grid-cols-2 pb-6 ">
+          <div className="grid pb-6 md:grid-cols-2">
             <div className="m-0 w-44">
               <DatepickerControl />
             </div>
 
-            <div className="m-3 relative h-80">
+            <div className="relative m-3 h-80">
               <div onClick={() => onDialogClick()} className="cursor-pointer">
                 Click here...
               </div>
               <DialogControl visible={isOpenDialog} closeModal={closeModal}>
-                <div className="flex justify-start items-center h-10 mb-28">
+                <div className="mb-28 flex h-10 items-center justify-start">
                   <AvatarControl
                     size={"sm"}
                     icon={"icon-Claim-htmlForm-Type"}
@@ -1851,12 +1843,12 @@ const UIControls = () => {
                     btnStyle={"bg-dialog-circle mr-3.5"}
                   />
 
-                  <label className="block text-sm label-lg text-color-text">
+                  <label className="label-lg text-color-text block text-sm">
                     Create New Playlist
                   </label>
                 </div>
 
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <DataButton
                     size={"md"}
                     name={"Cancel"}
@@ -1884,12 +1876,12 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="border-b text-sm m-3 py-2">Text Hover</div>
-            <div className="border-b text-sm m-3 py-2">PopOver Dialog </div>
+            <div className="m-3 border-b py-2 text-sm">Text Hover</div>
+            <div className="m-3 border-b py-2 text-sm">PopOver Dialog </div>
           </div>
 
           <div className="grid md:grid-cols-2">
-            <div className="text-sm m-3">
+            <div className="m-3 text-sm">
               <Text
                 isHoverEnable={true}
                 inlineBlock={true}
@@ -1924,8 +1916,8 @@ const UIControls = () => {
                 }
               >
                 <div className="w-wp-243">
-                  <div className="p-3.5 bg-gray-50">
-                    <div className="flex justify-start mb-3">
+                  <div className="bg-gray-50 p-3.5">
+                    <div className="mb-3 flex justify-start">
                       <>
                         <SearchInput
                           id={"Search"}
@@ -1956,7 +1948,7 @@ const UIControls = () => {
                       />
                     </div>
 
-                    <div className="flex justify-between tooltip-wrp h-hp-34">
+                    <div className="tooltip-wrp h-hp-34 flex justify-between">
                       {transferList}
                     </div>
                   </div>
@@ -1966,11 +1958,11 @@ const UIControls = () => {
           </div>
 
           <div className="grid md:grid-cols-1">
-            <div className="border-b text-sm m-3 py-2">DRAWER</div>
+            <div className="m-3 border-b py-2 text-sm">DRAWER</div>
           </div>
 
           <div className="mx-auto">
-            <div className="grid md:grid-cols-8 my-8">
+            <div className="my-8 grid md:grid-cols-8">
               <DataButton
                 size={"md"}
                 name={!isOpenDrawer ? "Open Drawer" : "Close Drawer"}
@@ -1995,7 +1987,7 @@ const UIControls = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-1 h-96 mb-20">
+          <div className="mb-20 grid h-96 md:grid-cols-1">
             <Drawer
               id="my-drawer-4"
               isOpenDrawer={isOpenDrawer || isOpenLeftDrawer}
@@ -2026,10 +2018,23 @@ const UIControls = () => {
                   />
                 </div>
               </div>
+              <h1>ScrollBar</h1>
+              <Scrollbar
+                maxHeight="80vh"
+                maxWidth="100%"
+                horizontal="hidden"
+                vertical="scroll"
+                autoHide={true}
+              >
+                <div style={{ height: "150vh", padding: "20px" }}>
+                  <h2>Scrollable Content</h2>
+                  <p>Put your long content here...</p>
+                </div>
+              </Scrollbar>
             </Drawer>
           </div>
         </div>
-        </ScrollBar>
+      </ScrollBar>
       {/* </ScrollBar> */}
     </>
   );
