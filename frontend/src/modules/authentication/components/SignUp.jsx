@@ -33,7 +33,7 @@ const SignUp = ({ currentStep }) => {
           <div className='grid justify-center '>
             <div className='rounded-full w-fit text-txt-18 text-white p-2 font-semibold' style={{ background: 'linear-gradient(135deg, #4CAF50, #2196F3)' }}>M+</div>
           </div>
-          <div className='mt-2 font-semibold text-txt-18'>MediHub</div>
+          <div className='mt-2 font-semibold text-txt-18'>MedLink360</div>
           <span className='text-links text-txt-md-12'>Join Our Healthcare Community</span>
         </div>
 
